@@ -3,7 +3,7 @@ package Task11;
 public class Driver {
 
     protected String name;
-    Boolean ready;
+    protected boolean ready;
 
     public Driver(String name, Boolean ready){
         this.name = name;

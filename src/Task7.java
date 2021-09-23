@@ -1,7 +1,5 @@
 
 public class Task7 {
-
-
     static class User {
         public int Age;
         public String firstname;

@@ -40,6 +40,11 @@ public class Task9 {
             this.whole += a.whole;
             this.fractional += a.fractional;
 
+            if (this.fractional > 100){
+                this.whole += (this.fractional - (this.fractional % 100)) % 100;
+                this.fractional = this.fractional/100;
+            }
+
         }
 
         public void dif(CustomDouble a) {
@@ -73,9 +78,7 @@ public class Task9 {
 
             }
 
-
-
-        public static void main(String[] args) {
+            public static void main(String[] args) {
 
             CustomDouble a = new CustomDouble();
             CustomDouble b = new CustomDouble();

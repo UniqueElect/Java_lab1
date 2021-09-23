@@ -27,7 +27,5 @@ public class Task1 {
 
              for (int i = 0; i < Flength; i++)
             System.out.println(Felidae[i]);
-
-
-  }
+ }
 }

@@ -32,39 +32,35 @@ public class Order {
             }
 
         }
+        public static void main(String[] args) {
 
+        Car car1 = new Car("Mazda", 4321 ,"red");
+        Car car2 = new Car("Ford",3252, "white");
+        Car car3 = new Car("Subaru",7890,"lightblue");
 
-    public static void main(String[] args) {
+        Driver d1 = new Driver("John",true);
+        Driver d2 = new Driver("Steve",true);
+        Driver d3 = new Driver("Juzo",true);
 
-    Car car1 = new Car("Mazda", 4321 ,"red");
-    Car car2 = new Car("Ford",3252, "white");
-    Car car3 = new Car("Subaru",7890,"lightblue");
+        car1.driver = d1;
+        car2.driver = d3;
 
-    Driver d1 = new Driver("John",true);
-    Driver d2 = new Driver("Steve",true);
-    Driver d3 = new Driver("Juzo",true);
+        Order o1 = new Order();
+        Order o2 = new Order();
 
-    car1.driver = d1;
-    car2.driver = d3;
-
-    Order o1 = new Order();
-    Order o2 = new Order();
-
-    o1.way = 20;
-    o1.getprice();
-    o1.order(car1);
-    o2.way = 30;
-    o2.getprice();
-    o2.order(car1);
-    o1.endorder(car1);
-    car1.driver = d2;
-    o2.way = 15;
-    o2.getprice();
-    o2.order(car1);
-    o1.way = 12;
-    o1.getprice();
-    o1.order(car2);
-
-
+        o1.way = 20;
+        o1.getprice();
+        o1.order(car1);
+        o2.way = 30;
+        o2.getprice();
+        o2.order(car1);
+        o1.endorder(car1);
+        car1.driver = d2;
+        o2.way = 15;
+        o2.getprice();
+        o2.order(car1);
+        o1.way = 12;
+        o1.getprice();
+        o1.order(car2);
     }
 }

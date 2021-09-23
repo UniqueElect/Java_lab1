@@ -1,9 +1,5 @@
 public class Task8 {
-
-
-
-
-       static class CustomDouble {
+    static class CustomDouble {
 
         public int whole = 0;
         public double fractional = 0;
@@ -29,14 +25,18 @@ public class Task8 {
                 return result;
             }
 
-           public void sum(Task9.CustomDouble a) {
+           public void sum(CustomDouble a) {
 
                this.whole += a.whole;
                this.fractional += a.fractional;
 
+               if (this.fractional > 100){
+                  this.whole += (this.fractional - (this.fractional % 100)) % 100;
+                         this.fractional = this.fractional/100;
+               }
            }
 
-           public void dif(Task9.CustomDouble a) {
+           public void dif(CustomDouble a) {
 
                this.whole -= a.whole;
                this.fractional -= a.fractional;
@@ -70,6 +70,9 @@ public class Task8 {
             System.out.println(cust.ToDouble());
             System.out.println(cust1.ToDouble());
             System.out.println(cust2.ToDouble());
+
+            cust1.dif(cust2);
+            System.out.println(cust1.whole + cust1.fractional);
        }
 
 }

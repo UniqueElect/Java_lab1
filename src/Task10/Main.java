@@ -1,31 +1,25 @@
 package Task10;
-
 public class Main {
     public static void main(String[] args) {
 
+        Weather w1 = new Weather("Lviv", "sunny", 10);
+        Weather w2 = new Weather("Lviv", "rainy", 5);
+        Weather w3 = new Weather("Lviv", "rainy",  -1);
+        Weather w4 = new Weather("Lviv", "cloudy", 7);
+        Weather w5 = new Weather("Lviv", "rainy", 0);
+        Weather w6 = new Weather("Lviv", "foggy", 12);
+        Weather w7 = new Weather("Lviv", "sunny", 14);
+
         Day[] a = new Day[7];
-            a[0] = new Day("monday");
-            a[1] = new Day("tuesday");
-            a[2] = new Day("wednesday");
-            a[3] = new Day("thursday");
-            a[4] = new Day("friday");
-            a[5] = new Day("saturday");
-            a[6] = new Day("sunday");
+        a[0] = new Day("monday", w1);
+        a[1] = new Day("tuesday", w2);
+        a[2] = new Day("wednesday", w3);
+        a[3] = new Day("thursday", w4);
+        a[4] = new Day("friday", w5);
+        a[5] = new Day("saturday", w6);
+        a[6] = new Day("sunday", w7);
 
-            Weather[] b = new Weather[7];
-            b[0] = new Weather("Lviv", "sunny", 10);
-            b[1] = new Weather("Lviv", "rainy", 5);
-            b[2] = new Weather("Lviv", "rainy",  -1);
-            b[3] = new Weather("Lviv", "cloudy", 7);
-            b[4] = new Weather("Lviv", "rainy", 0);
-            b[5] = new Weather("Lviv", "foggy", 12);
-            b[6] = new Weather("Lviv", "sunny", 14);
-
-
-       for (int i = 0; i < 7; i++ )
-           if(b[i].temperature > 0 )
-           System.out.println(a[i].dow + ": " + b[i].city + " " + b[i].weathertype + " +" + b[i].temperature);
-           else System.out.println(a[i].dow + ": " + b[i].city + " " + b[i].weathertype + " " + b[i].temperature);
-
+        for (int i = 0; i < 7; i++ )
+            System.out.println(a[i].toString());
     }
 }
